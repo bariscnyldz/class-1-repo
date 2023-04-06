@@ -1,0 +1,114 @@
+Here are homework questions for you to recap the concepts
+we went through in class.
+
+1. Navigating the terminal
+  a, What is a root directory?
+  # It is the base directory from which all other directories and files are organized and located
+
+  b, What is the difference between root and home directory?
+  # The root directory is the top-level directory in a file system, while the home directory is a directory created for each user in the system to store personal files. The root directory is essential for system operations and contains critical system files, while the home directory is used by individual users to store their own files and directories.
+
+  c, What is the difference between absolute and relative path?
+  # An absolute path is a complete path that specifies the location of a file or directory starting from the root directory of the file system.
+A relative path, on the other hand, is a path that is specified relative to the current working directory.
+
+  d, What command do you use to see what directory are you currently in?
+  pwd
+
+  e, How would you see the files and folders in a directory?
+  ls
+
+  f, How do you go back to your home directory?
+  # cd ~
+
+  g, How do you create a new folder, can you also specify in the command where you want to save it ?
+  # mkdir /home/user/project/new_folder
+
+  h, How do you remove a folder/directory, is it the same as removing a file?
+  # rmdir command is used to remove an empty directory, (rmdir one_folder) or rm -r my_folder / for files we can use rm file-name
+
+  i, What is a file or folder is not empty ? What flag would you use to remove it anyway?
+  # rm -r my_folder 
+
+  j, How do you move a folder/file ? What arguments does the command take?
+  # mv command, the first argument is the file or folder you want to move, and the second argument is the destination where you want to move the file or folder.
+
+  k, How can you find out more about a command and see the available options, syntax etc.
+    (How/Where do you see the manual/help for a command)
+    # man / for example man ls,  The manual page is displayed in terminal page.
+
+  l, With what command do you rename a folder/file in the command line?
+
+# mv onefile.txt twofile.txt
+
+  m, How do you copy a folder ?
+  # cp / cp -r original copy
+
+  n, What command do you use to open a folder/file ?
+  # open / start
+
+2. Creating a new project
+  a, How do you create a new folder (what command) ?
+  # mkdir
+
+  b, What command do you use to create/initiate a local repository (from the command line)?
+     /One can also create a new repository on Github and then just clone it to their machine./
+
+     # git init
+
+  c, What command do you use to create a new file ?
+touch
+  d, If you create a file and and add text to it, these changes are now on your working directory.
+     How would you save these to the local repository (describe the steps with commands)
+
+    - from working directory to the staging area
+
+    - from the staging area to local repository
+
+    # 1. From the working directory to the staging area:
+
+  # git add example.txt
+  
+# 2. From the staging area to local repository
+
+  # git commit -m "Update README.md"
+  
+
+  e, What does git status do ?
+  # command is used to display the current state of the Git repository. For example untracked files, not committed files etc.
+
+  f, How would you check your commit history?
+  # git log
+
+  g, To share your project(folder), you will need to create a remote repository.
+     This can be done either on Github or in the command line using "gh repo create" command.
+     To connect your local repository to the remote one (if you were to create it on github)
+     you need to add remote to it. Briefly describe, what would be the commands to do this ?
+
+    - How do you check whether you already have some github/remote repository connected to your local one?
+
+    - What command do you use to add the remote
+
+    # git remote add origin "url"
+
+
+  h, When local and remote repository are connected, one can push the changes/files so they are visible
+     on github. What would be the structrure of the command ? Do you need to create a pull request?
+     # git remote add origin "url"
+# git remote -v
+# git push origin main
+
+
+3. Working on an existing project
+  a, To get this homework to your computer you needed to copy a remote repository into your machine.
+    What were the commands you needed to use?
+    # No need. cloning a project from a Git repository is creating a local copy of the entire repository.
+
+  b, Do you need to initiate a git repository after cloning a project?
+
+  c, What is the difference between forking and cloning?
+  # Forking: creating a copy of the entire repository under own GitHub account. Cloning:  creating a local copy of the repository on own computer.
+
+  d, Can you just push your changes to repository that you don't "own" on github?
+
+  No
